@@ -8,6 +8,7 @@ import gquotes from "../assets/img/project/gquotes1.png";
 import hotel from "../assets/img/project/hotel1.png";
 import perpus from "../assets/img/project/perpus.png";
 import quran from "../assets/img/project/quran1.png";
+import weequran from "../assets/img/project/weequran.png";
 import unigo from "../assets/img/project/unigo1.png";
 import pplg from "../assets/img/project/webpplg.png";
 import webtv from "../assets/img/project/webtv.jpeg";
@@ -15,11 +16,21 @@ import webtv from "../assets/img/project/webtv.jpeg";
 const Projects = () => {
   const portfolio = [
     {
+      title: "WeeQuran",
+      desc: "Al-Quran Online berbentuk website. Tersedia surah dan ayat serta tafsir yang lengkap. Data yang ditampilkan diambil dari public API.",
+      img: weequran,
+      tech: ["React JS", "Tailwind CSS"],
+      github: true,
+      link: "https://github.com/FigoArbiansyah/web_quran",
+      deploy: "weequran.vercel.app",
+    },
+    {
       title: "Perpus Programmer",
       desc: "Adalah sebuah website peminjaman buku dimana data buku, data peminjaman, data user dan proses peminjaman dilakukan secara online melalui website ini.",
       img: perpus,
       tech: ["Laravel", "Bootstrap 5"],
       github: false,
+      deploy: "",
     },
     {
       title: "Al-Quran Online",
@@ -28,6 +39,7 @@ const Projects = () => {
       tech: ["PHP", "Bootstrap 5", "MySQL"],
       github: true,
       link: "https://github.com/FigoArbiansyah/Al-Quran_Online",
+      deploy: "",
     },
     {
       title: "Website Jurusan PPLG",
@@ -35,6 +47,7 @@ const Projects = () => {
       img: pplg,
       tech: ["Laravel", "Bootstrap 5", "Swiper JS", "MySQL"],
       github: false,
+      deploy: "",
     },
     {
       title: "Web TV",
@@ -42,6 +55,7 @@ const Projects = () => {
       img: webtv,
       tech: ["Laravel", "Bootstrap 5", "Javascript", "MySQL"],
       github: false,
+      deploy: "",
     },
     {
       title: "Unigo",
@@ -49,6 +63,7 @@ const Projects = () => {
       img: unigo,
       tech: ["PHP", "Bootstrap 5", "Particle JS", "Javascript", "MySQL"],
       github: false,
+      deploy: "",
     },
     {
       title: "Website Blog",
@@ -56,6 +71,7 @@ const Projects = () => {
       img: blog,
       tech: ["PHP", "Bootstrap 5", "MySQL"],
       github: false,
+      deploy: "",
     },
     {
       title: "Hotel Hebat",
@@ -63,6 +79,7 @@ const Projects = () => {
       img: hotel,
       tech: ["PHP", "Bootstrap 5", "MySQL"],
       github: false,
+      deploy: "",
     },
     {
       title: "Website Absensi",
@@ -70,6 +87,7 @@ const Projects = () => {
       img: absensi,
       tech: ["PHP", "Bootstrap 5", "MySQL", "JQuery"],
       github: false,
+      deploy: "",
     },
     {
       title: "G'Quotes",
@@ -77,6 +95,7 @@ const Projects = () => {
       img: gquotes,
       tech: ["PHP", "Bootstrap 5", "MySQL"],
       github: false,
+      deploy: "",
     },
   ];
 
@@ -100,7 +119,7 @@ const Projects = () => {
         <div className="flex flex-wrap justify-evenly mt-14 animate__animated animate__fadeIn">
           {portfolio.map((port, i) => {
             return (
-              <div className="w-custom md:mx-0 mx-auto bg-slate-200 rounded p-4 mb-6">
+              <div className="w-custom md:mx-0 shadow-lg mx-auto bg-slate-200 rounded p-4 mb-6">
                 <div>
                   <img
                     src={port.img}
@@ -111,8 +130,8 @@ const Projects = () => {
                   <p className="text-lg font-bold">{port.title}</p>
                   <p className="text-gray-600 mt-3">{port.desc}</p>
                 </div>
-                {port.github ? (
-                  <div className="flex gap-6">
+                <div className="flex gap-3">
+                  {port.github ? (
                     <a
                       href={port.link}
                       className="bg-black text-sm py-2 px-4 text-white rounded flex gap-2 items-center"
@@ -120,10 +139,21 @@ const Projects = () => {
                       <i className="fa-brands fa-github"></i>
                       <span>Github</span>
                     </a>
-                  </div>
-                ) : (
-                  ""
-                )}
+                  ) : (
+                    ""
+                  )}
+                  {port.deploy != "" ? (
+                    <a
+                      href={port.deploy}
+                      className="bg-cyan-800 text-sm py-2 px-4 text-white rounded flex gap-2 items-center"
+                    >
+                      <i className="fa-solid fa-link"></i>
+                      <span>Lihat</span>
+                    </a>
+                  ) : (
+                    ""
+                  )}
+                </div>
                 <div className="flex gap-2 mt-3 flex-wrap">
                   {port.tech.map((tech, i) => {
                     return (

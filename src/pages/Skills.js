@@ -67,7 +67,7 @@ const Skills = () => {
   return (
     <Main class="min-h-screen items-center flex">
       <Navbar skills="font-bold" />
-      <div className="w-full flex md:flex-row flex-col justify-between items-center md:px-32 md:gap-0 gap-10">
+      <div className="w-full flex md:flex-row flex-col justify-between items-center md:px-32 md:gap-0 gap-10 max-md:mt-20">
         <div className="md:w-5/12 w-8/12 md:pl-10 md:text-left text-center">
           <p className="md:text-5xl text-4xl font-extrabold flex flex-col gap-3  animate__animated animate__zoomIn">
             <span>My Skills</span>
