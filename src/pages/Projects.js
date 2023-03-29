@@ -146,6 +146,7 @@ const Projects = () => {
                     <a
                       href={port.deploy}
                       className="bg-cyan-800 text-sm py-2 px-4 text-white rounded flex gap-2 items-center"
+                      target={"_blank"}
                     >
                       <i className="fa-solid fa-link"></i>
                       <span>Lihat</span>
