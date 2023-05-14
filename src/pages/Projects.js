@@ -23,6 +23,7 @@ const Projects = () => {
       tech: ["Laravel", "MySQL", "Bootstrap 5"],
       github: true,
       link: "https://github.com/FigoArbiansyah/vote-app",
+      deploy: "",
     },
     {
       title: "WeeQuran",
