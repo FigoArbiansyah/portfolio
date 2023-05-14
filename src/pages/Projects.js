@@ -12,9 +12,18 @@ import weequran from "../assets/img/project/weequran.png";
 import unigo from "../assets/img/project/unigo1.png";
 import pplg from "../assets/img/project/webpplg.png";
 import webtv from "../assets/img/project/webtv.jpeg";
+import pilihaken from "../assets/img/project/pilihaken.png";
 
 const Projects = () => {
   const portfolio = [
+    {
+      title: "Pilihaken!",
+      desc: "Website untuk melakukan voting secara online yang mana poll dan choice nya dapat di kelola oleh admin.",
+      img: pilihaken,
+      tech: ["Laravel", "MySQL", "Bootstrap 5"],
+      github: true,
+      link: "https://github.com/FigoArbiansyah/vote-app",
+    },
     {
       title: "WeeQuran",
       desc: "Al-Quran Online berbentuk website. Tersedia surah dan ayat serta tafsir yang lengkap. Data yang ditampilkan diambil dari public API.",
