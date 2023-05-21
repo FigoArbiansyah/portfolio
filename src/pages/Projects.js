@@ -19,7 +19,7 @@ const Projects = () => {
   const portfolio = [
     {
       title: "Rekindle",
-      desc: "Website yang berisi cara mempertahankan budaya dikala pandemi dan setelahnya.",
+      desc: "Website yang berisi cara mempertahankan budaya dikala pandemi dan setelahnya.  Website ini dibuat untuk mengikuti perlombaan Difest 2023.",
       img: rekindle,
       tech: ["Bootstrap 5", "Javascript", "Splitting JS", "Scroll Magic", "GSAP", "AOS"],
       github: false,
