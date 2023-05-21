@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Main from '../layouts/Main'
 import Certificate1 from "../assets/img/certificate/dicoding-frontend.png"
 import Certificate2 from "../assets/img/certificate/html-sololearn.jpg"
+import Certificate3 from "../assets/img/certificate/lks_kota.PNG"
 import "../index.css"
 import FsLightbox from 'fslightbox-react';
 import Navbar from "../components/Navbar"
@@ -52,6 +53,9 @@ const About = () => {
                     </div>
                     <div className="w-full flex flex-row mt-6 my-certificate justify-start gap-8 py-4 flex-wrap">
                         <div className="md:w-5/12 mb-6 cursor-pointer">
+                            <img src={Certificate3} className='w-full object-contain shadow-lg border' alt="" onClick={() => openLightboxOnSlide(3)} />
+                        </div>
+                        <div className="md:w-5/12 mb-6 cursor-pointer">
                             <img src={Certificate1} className='w-full object-contain shadow-lg' alt="" onClick={() => openLightboxOnSlide(1)} />
                         </div>
                         <div className="md:w-5/12 mb-6 cursor-pointer">
@@ -66,6 +70,7 @@ const About = () => {
             sources={[
                 Certificate1,
                 Certificate2,
+                Certificate3
             ]}
             slide={lightboxController.slide}
             

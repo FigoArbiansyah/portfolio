@@ -13,9 +13,19 @@ import unigo from "../assets/img/project/unigo1.png";
 import pplg from "../assets/img/project/webpplg.png";
 import webtv from "../assets/img/project/webtv.jpeg";
 import pilihaken from "../assets/img/project/pilihaken.png";
+import rekindle from "../assets/img/project/rekindle.png";
 
 const Projects = () => {
   const portfolio = [
+    {
+      title: "Rekindle",
+      desc: "Website yang berisi cara mempertahankan budaya dikala pandemi dan setelahnya.",
+      img: rekindle,
+      tech: ["Bootstrap 5", "Javascript", "Splitting JS", "Scroll Magic", "GSAP", "AOS"],
+      github: false,
+      link: "https://github.com/FigoArbiansyah/rekindle-website",
+      deploy: "https://rekindle-website.vercel.app/",
+    },
     {
       title: "Pilihaken!",
       desc: "Website untuk melakukan voting secara online yang mana poll dan choice nya dapat di kelola oleh admin.",
@@ -129,50 +139,54 @@ const Projects = () => {
         <div className="flex flex-wrap justify-evenly mt-14 animate__animated animate__fadeIn">
           {portfolio.map((port, i) => {
             return (
-              <div className="w-custom md:mx-0 shadow-lg mx-auto bg-slate-200 rounded p-4 mb-6">
+              <div className="w-custom md:mx-0 shadow-lg mx-auto bg-slate-200 rounded p-4 mb-6 flex flex-col justify-between">
                 <div>
-                  <img
-                    src={port.img}
-                    className="object-contain w-full h-full"
-                  />
+                  <div>
+                    <img
+                      src={port.img}
+                      className="aspect-video object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="my-3">
+                    <p className="text-lg font-bold">{port.title}</p>
+                    <p className="text-gray-600 mt-3">{port.desc}</p>
+                  </div>
                 </div>
-                <div className="my-3">
-                  <p className="text-lg font-bold">{port.title}</p>
-                  <p className="text-gray-600 mt-3">{port.desc}</p>
-                </div>
-                <div className="flex gap-3">
-                  {port.github ? (
-                    <a
-                      href={port.link}
-                      className="bg-black text-sm py-2 px-4 text-white rounded flex gap-2 items-center"
-                    >
-                      <i className="fa-brands fa-github"></i>
-                      <span>Github</span>
-                    </a>
-                  ) : (
-                    ""
-                  )}
-                  {port.deploy != "" ? (
-                    <a
-                      href={`${port.deploy}`}
-                      className="bg-cyan-800 text-sm py-2 px-4 text-white rounded flex gap-2 items-center"
-                      target={"_blank"}
-                    >
-                      <i className="fa-solid fa-link"></i>
-                      <span>Lihat</span>
-                    </a>
-                  ) : (
-                    ""
-                  )}
-                </div>
-                <div className="flex gap-2 mt-3 flex-wrap">
-                  {port.tech.map((tech, i) => {
-                    return (
-                      <span className="bg-cyan-700 text-sm py-1 px-3 text-white rounded flex gap-2 items-center">
-                        {tech}
-                      </span>
-                    );
-                  })}
+                <div>
+                  <div className="flex gap-3">
+                    {port.github ? (
+                      <a
+                        href={port.link}
+                        className="bg-black text-sm py-2 px-4 text-white rounded flex gap-2 items-center"
+                      >
+                        <i className="fa-brands fa-github"></i>
+                        <span>Github</span>
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                    {port.deploy != "" ? (
+                      <a
+                        href={`${port.deploy}`}
+                        className="bg-cyan-800 text-sm py-2 px-4 text-white rounded flex gap-2 items-center"
+                        target={"_blank"}
+                      >
+                        <i className="fa-solid fa-link"></i>
+                        <span>Lihat</span>
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                  <div className="flex gap-2 mt-3 flex-wrap">
+                    {port.tech.map((tech, i) => {
+                      return (
+                        <span className="bg-cyan-700 text-sm py-1 px-3 text-white rounded flex gap-2 items-center">
+                          {tech}
+                        </span>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             );
