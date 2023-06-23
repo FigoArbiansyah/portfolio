@@ -14,9 +14,19 @@ import pplg from "../assets/img/project/webpplg.png";
 import webtv from "../assets/img/project/webtv.jpeg";
 import pilihaken from "../assets/img/project/pilihaken.png";
 import rekindle from "../assets/img/project/rekindle.png";
+import gomerce from "../assets/img/project/gomerce.png";
 
 const Projects = () => {
   const portfolio = [
+    {
+      title: "Goomerce",
+      desc: "Website ini dibuat untuk memenuhi tugas akhir dari Bootcamp yang diadakan oleh PT Juke. Website ini harus nya berisi data hotel ataupun penginapan, namun karena keterbatasan data dari public api, maka kita menyesuaikannya menggunakan api product dari https://dummyjson.com/products, dan untuk login bisa menggunakan data user dari https://dummyjson.com/users",
+      img: gomerce,
+      tech: ["Nuxt JS", "Tailwind CSS", "Swiper JS"],
+      github: false,
+      link: "https://github.com/FigoArbiansyah/airbnb-clone",
+      deploy: "https://airbnb-clone-figoarbiansyah.vercel.app/",
+    },
     {
       title: "Rekindle",
       desc: "Website yang berisi cara mempertahankan budaya dikala pandemi dan setelahnya.  Website ini dibuat untuk mengikuti perlombaan Difest 2023.",
