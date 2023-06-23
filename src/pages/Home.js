@@ -35,7 +35,7 @@ const Home = () => {
         </div>
         <div className="md:w-1/2 w-10/12 md:mt-0 mt-20 animate__animated animate__fadeIn">
           <div className="w-2/3 mx-auto profil relative">
-            <img src={"/figo.jpeg"} className="w-full relative" alt="" />
+            <img src={"/figo_with_jas.jpeg"} className="w-full relative" alt="" />
             <div className="w-full border-solid border-2 border-gray-900 absolute top-0 h-full translate-y-14 translate-x-14 -z-10"></div>
           </div>
         </div>
